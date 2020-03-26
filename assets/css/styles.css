@@ -9213,14 +9213,13 @@ label.el-radio {
       font-size: 3.5em;
       font-weight: bold;
       line-height: 1.1;
-      letter-spacing: -0.02em!important;
+      letter-spacing: -0.01em!important;
     }
 
     .carousel_p {
-      font-size: 1.2em;
       line-height: 1.1;
       font-weight: 500;
-      font-size: 1.2em;  
+      font-size: 1.4em;  
       background: #fff;
       color: #0075c9;
       padding: 1em 1.5em
@@ -9231,8 +9230,8 @@ label.el-radio {
     }
 
     .text-shadow {
-          text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.45);
-      }
+      text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.45);
+    }
 
 
 
