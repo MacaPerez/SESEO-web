@@ -9229,6 +9229,19 @@ label.el-radio {
       max-width: 100px;
     }
 
+    .carousel_seseo_logo {
+      position: absolute;
+      top: 82.1px;
+      left: 164px;
+      max-width: 120px;
+    }
+
+    @media (min-width: 1200px) {
+      .carousel_seseo_logo {
+        max-width: 150px;
+      }
+    }
+
     .text-shadow {
       text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.45);
     }
