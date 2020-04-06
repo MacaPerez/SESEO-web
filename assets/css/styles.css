@@ -9201,8 +9201,9 @@ label.el-radio {
   font-size: 125%;
 }
 
-/**
- * Custom carousel styles 
+
+
+/* Custom carousel styles - Mobile first
  *
  * -------------------------------------------------------------------
  */
@@ -9210,101 +9211,199 @@ label.el-radio {
  /* 01. Common */
 
     .carousel_h2 {
-      font-size: 3.5em;
+      font-size: 2.5em;
       font-weight: bold;
+      text-align: left!important;
       line-height: 1.1;
       letter-spacing: -0.01em!important;
     }
 
     .carousel_p {
+      font-size: 1.1em;
       line-height: 1.1;
-      font-weight: 500;
-      font-size: 1.4em;  
-      background: #fff;
-      color: #0075c9;
-      padding: 1em 1.5em
+      font-weight: bold;
+      text-align: left!important;
+      color: #fff;
+      background: #ffffff61;
+      padding: 0.5em 1em;
     }
 
     .carousel_store_logo {
-      max-width: 100px;
+      max-width: 70px;
     }
 
     .carousel_seseo_logo {
       position: absolute;
-      top: 82.1px;
-      left: 164px;
+      top: 78.1px;
+      left: 30px;
       max-width: 120px;
     }
 
-    @media (min-width: 1200px) {
-      .carousel_seseo_logo {
-        max-width: 150px;
-      }
+    .carousel_seseo_logo_slide1 {
+      left: unset;
+      right: 30px;
     }
 
     .text-shadow {
       text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.45);
     }
 
-
-
-    /* 02. Grid types */
-
-      /* 2.1 Type 1 */
+    /* 02. Grid 1 */
     
-      .carousel_grid1 {
-        display: grid;
-        grid-template-areas:  
-          "a a b"
-          "c c d";
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 5px;
+    .carousel_grid1 {
+      display: grid;
+      grid-template-areas:  
+        "a a"
+        "b c";
+      grid-template-columns: 70% 30%;
+      grid-gap: 5px;
+    }
+
+    .carousel_grid1_item1 {
+      grid-area: a;
+    }
+
+    .carousel_grid1_item2 {
+      grid-area: b;
+    }
+
+    .carousel_grid1_item3 {
+      grid-area: c;
+      justify-content: flex-end;
+      text-align: left;
+    }
+
+
+/**
+ * Custom carousel styles - Ipad
+ *
+ * -------------------------------------------------------------------
+ */ 
+
+ @media (min-width: 768px){
+
+    /* 01. Common */
+
+    .carousel-caption {
+      bottom: 90px;
+      padding-bottom: 50px;
+    }
+
+    .carousel_seseo_logo {
+        top: 82.1px;
       }
 
-      .carousel_grid1_item1 {
-        grid-area: a;
-        max-width: 50%;
+    .carousel_seseo_logo_slide1 {
+      left: 30px;
+    }  
+
+ }
+
+
+
+
+/**
+ * Custom carousel styles - Desktop 
+ *
+ * -------------------------------------------------------------------
+ */
+
+
+ @media (min-width: 1200px) {
+
+  /* 01. Common */
+
+    .carousel-caption {
+      bottom: 20px;
+      padding-bottom: 20px;
+    }
+
+    .carousel_seseo_logo {
+        max-width: 150px;
+        top: 82.1px;
+        left: 164px;
       }
 
-      .carousel_grid1_item2 {
-        grid-area: c;
-        max-width: 60%;
-        margin-left: 5em;
-      }
+    .carousel_h2 {
+        font-size: 3.5em;
+    }
 
-      .carousel_grid1_item3 {
-        grid-area: d;
-        justify-content: flex-end;
-        text-align: left;
-      }
+    .carousel_p {
+      font-size: 1.4em;
+      font-weight: 500; 
+      line-height: 1.1; 
+      background: #fff;
+      color: #0075c9;
+      padding: 1em 1.5em;
+    }
 
-      /* 2.2 Type 2 */
-    
-      .carousel_grid2 {
-        display: grid;
-        grid-template-areas:  
-          "a b c"
-          "d e e";
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 5px;
-      }
+    .carousel_store_logo {
+      max-width: 100px;
+    }
 
-      .carousel_grid2_item1 {
-        grid-area: c;
-      }
 
-      .carousel_grid2_item2 {
-        grid-area: e;
-        justify-self: end;
-        max-width: 50%;
+      /* 02. Grid types */
 
-      }
+        /* 2.1 Type 1 */
+      
+        .carousel_grid1 {
+          display: grid;
+          grid-template-areas:  
+            "a a b"
+            "c c d";
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 5px;
+        }
 
-      .carousel_grid2_item3 {
-        grid-area: b;
-        justify-content: flex-end;
-        text-align: center;
-      }
+        .carousel_grid1_item1 {
+          grid-area: a;
+          max-width: 50%;
+        }
+
+        .carousel_grid1_item2 {
+          grid-area: c;
+          max-width: 60%;
+          margin-left: 5em;
+        }
+
+        .carousel_grid1_item3 {
+          grid-area: d;
+          justify-content: flex-end;
+          text-align: left;
+        }
+
+        /* 2.2 Type 2 */
+      
+        .carousel_grid2 {
+          display: grid;
+          grid-template-areas:  
+            "a b c"
+            "d e e";
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 5px;
+        }
+
+        .carousel_grid2_item1 {
+          grid-area: c;
+        }
+
+        .carousel_grid2_item2 {
+          grid-area: e;
+          justify-self: end;
+          max-width: 50%;
+
+        }
+
+        .carousel_grid2_item3 {
+          grid-area: b;
+          justify-content: flex-end;
+          text-align: center;
+        }
+
+        /**
+
+ }
+
 
 
 
